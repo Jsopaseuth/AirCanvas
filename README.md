@@ -8,6 +8,4 @@ AirCanvas was developed and tested using RPI5 with M.2 HAT+ AI Accelerator and p
 
 **Config File Detail pdf:** Provides detailed descriptions of what each variable, included in the config file, will affect.
 
-**Updates pdf:** Provides the enhancements I developed (The enhancements are not needed in the original program to run)
-
 **V1.1:** Updated the logic for the color_regions class to align with the UI when frame resolution is changed
