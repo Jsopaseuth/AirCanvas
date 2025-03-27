@@ -1,8 +1,8 @@
 import os
 
 # Configurations/Global Parameters
-CANVAS_WIDTH = 1280
-CANVAS_HEIGHT = 720
+CANVAS_WIDTH = 1920
+CANVAS_HEIGHT = 1080
 HEADER_HEIGHT = 125
 STROKE_LIFETIME = 30.0 # Lifetime in seconds of drawn pixels
 default_color = (0, 0, 255) # default red
@@ -22,12 +22,19 @@ ERASER_COLOR = (255, 192, 203)  # Light pink for eraser
 
 # Define color detection regions in the overlay
 # Format: (min_x, max_x, min_y, max_y, color_name, BGR color value)
-# Updated based on the exact positions provided
+# Updated based on percentage of distance away from left side of screen position
 color_regions = [
-    (150, 250, 10, HEADER_HEIGHT-10, "blue", BLUE_COLOR),     # Blue brush (x=200)
-    (550, 650, 10, HEADER_HEIGHT-10, "green", GREEN_COLOR),   # Green brush (x=600)
-    (940, 1040, 10, HEADER_HEIGHT-10, "red", RED_COLOR),      # Red brush (x=990)
-    (1160, 1260, 10, HEADER_HEIGHT-10, "eraser", ERASER_COLOR) # Eraser (x=1210)
+    (CANVAS_WIDTH * 0.12, CANVAS_WIDTH * 0.20, HEADER_HEIGHT * 0.01, HEADER_HEIGHT * 0.95, "blue", BLUE_COLOR),     # 12-20% on x axis
+    (CANVAS_WIDTH * 0.43, CANVAS_WIDTH * 0.51, HEADER_HEIGHT * 0.01, HEADER_HEIGHT * 0.95, "green", GREEN_COLOR),   # 43-51% on x axis
+    (CANVAS_WIDTH * 0.73, CANVAS_WIDTH * 0.81, HEADER_HEIGHT * 0.01, HEADER_HEIGHT * 0.95, "red", RED_COLOR),      # 73-81% on x axis
+    (CANVAS_WIDTH * 0.91, CANVAS_WIDTH * 0.98, HEADER_HEIGHT * 0.01, HEADER_HEIGHT * 0.95, "eraser", ERASER_COLOR) # 91-98% on x axis
+    
+    
+    # (150, 250, 10, HEADER_HEIGHT-10, "blue", BLUE_COLOR),     # Blue brush (x=200)
+    # (550, 650, 10, HEADER_HEIGHT-10, "green", GREEN_COLOR),   # Green brush (x=600)
+    # (940, 1040, 10, HEADER_HEIGHT-10, "red", RED_COLOR),      # Red brush (x=990)
+    # (1160, 1260, 10, HEADER_HEIGHT-10, "eraser", ERASER_COLOR) # Eraser (x=1210)
+    
 ]
 
 # Add brush size control regions to the right side of the screen
