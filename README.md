@@ -8,4 +8,4 @@ AirCanvas was developed and tested using RPI5 with M.2 HAT+ AI Accelerator and p
 
 **Config File Detail pdf:** Provides detailed descriptions of what each variable, included in the config file, will affect.
 
-**V1.1:** Updated the logic for the color_regions class to align with the UI when frame resolution is changed
+**TicTacToe:** This update adds a TicTacToe game to the main AirCanvas program, allowing the game to start with a gesture (gesture control in documentation). Once started the game is only functional with hand gesture controls. This implementation also has a built in AI to play against a minimax algorithm, along with a 2 player mode.
